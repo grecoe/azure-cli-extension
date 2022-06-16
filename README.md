@@ -15,13 +15,8 @@ How to create an Azure CLI Extension
     - [azdev setup](https://github.com/Azure/azure-cli/blob/master/doc/extensions/authoring.md)
 
 # Environment Setup
-This section walks you through setting up an environment on your machine. There are the actual steps below in the command section which explains each step to take. This includes getting a few things locally which I thought needed calling out specifically. 
+This section walks you through setting up an environment on your machine. 
 
-1. The azure-cli repository (cloned to this directory and already masked out by .gitignore)
-2. My own extensions repo (cloned to this directory and already masked out by .gitignore) if you want to just use the template I have. Otherwise:
-    - Create a git repo for your extension
-    - Clone it to this directory, mask it in .gitignore
-    - Change the **azdev extension repo add" call to the name of your repo folder.
 
 ### Stages
 1. [Clone repositories](#clone-repositories)
