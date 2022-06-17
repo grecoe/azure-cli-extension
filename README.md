@@ -5,6 +5,7 @@ How to create an Azure CLI Extension
 ## Contents
 
 - [Environment Setup](#environment-setup)
+- [Included Example](#included-example)
 
 - Appendix
     - [Appendix A: azdev packages](#appendix-a-azdev-packages)
@@ -13,6 +14,7 @@ How to create an Azure CLI Extension
 - Links
     - [az extension](https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest)
     - [azdev setup](https://github.com/Azure/azure-cli/blob/master/doc/extensions/authoring.md)
+    - [extension example](https://microsoft.github.io/AzureTipsAndTricks/blog/tip200.html)
 
 # Environment Setup
 This section walks you through setting up an environment on your machine. 
@@ -109,3 +111,77 @@ Run it and get help on the commands.
 az ingestion -h
 ```
 
+
+# Included Example
+
+The example in the repository https://github.com/grecoe/azure-cli-extensions.git is called ingestion.
+
+It's a simple extension that currently only acquires an access token provided information about a service principal in Azure Active Directory. 
+
+Configuartion can be passed in through parameters or through a configuration file, with parameters superceding a configuration file if both are provided. 
+
+Specific options utilized:
+- Optional parameters. 
+- Parameter validation.
+- Client factory.  
+- Customized help.
+
+Specifically, this extension exposes the command `az ingestion token get ..`
+
+- [Command help](#command-help)
+- [Usage](#usage)
+
+## Command help:
+```bash
+> az ingestion token get -h
+
+This command is from the following extension: ingestion
+
+Command
+    az ingestion token get : Get authentication token.
+        Command group 'ingestion token' is in preview and under development. Reference and
+        support levels: https://aka.ms/CLI_refstatus
+Arguments
+    --configuration -f                : Configuration File.
+    --service-principal -p            : Service Principal ID.
+    --service-principal-credential -c : Service Principal Secret.
+    --tenent -t                       : Active Directory Tenent.
+
+Global Arguments
+    --debug                           : Increase logging verbosity to show all debug logs.
+    --help -h                         : Show this help message and exit.
+    --only-show-errors                : Only show errors, suppressing warnings.
+    --output -o                       : Output format.  Allowed values: json, jsonc, none, table,
+                                        tsv, yaml, yamlc.  Default: json.
+    --query                           : JMESPath query string. See http://jmespath.org/ for more
+                                        information and examples.
+    --subscription                    : Name or ID of subscription. You can configure the default
+                                        subscription using `az account set -s NAME_OR_ID`.
+    --verbose                         : Increase logging verbosity. Use --debug for full debug logs.
+
+Examples
+    Acquire platform token
+        Token can be acquired by providing the configuration direction or by providing a
+        configuration json file with the settings contained within it.
+
+        az ingestion token --tenent "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                          --service-principal "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                          --service-principal-credential "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        or
+
+        Supply a configuration file, as a json dictionry, with the above fields.
+
+        az ingestion token --configuration "local_json_with_settings"
+
+To search AI knowledge base for examples, use: az find "az ingestion token get"
+
+Please let us know how we are doing: https://aka.ms/azureclihats
+```
+
+
+## Usage:
+```bash
+az ingestion token get -p SERVICE_PRINCPAL_ID -c SERVICE_PRINCIPAL_CRED -t AZURE_TENENT
+
+az ingestion token get -f token.json
+```
