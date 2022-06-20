@@ -1,0 +1,16 @@
+{
+    "name" : "TestPlatform",
+    "url" : "https://no_platform_here",
+    "data_partition" : "test-platform",
+    "api_path" : {
+        "ENTITLEMENTS_HOST" : "/api/entitlements/v2",
+        "LEGAL_HOST" : "/api/legal/v1",
+        "SCHEMA_HOST" : "/api/schema-service/v1",
+        "STORAGE_HOST" : "/api/storage/v2",
+        "SEARCH_HOST" : "/api/search/v2",
+        "WORKLFOW_HOST" : "/api/workflow/v1",
+        "FILE_HOST" : "/api/file/v2",
+        "PARTITION_HOST" : "/api/partition/v1",
+        "REGISTER_HOST" : "/api/register/v1"        
+    }
+}

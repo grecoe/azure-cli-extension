@@ -131,6 +131,24 @@ Specifically, this extension exposes the command `az ingestion token get ..`
 - [Command help](#command-help)
 - [Usage](#usage)
 
+## Commands
+
+### token
+> az ingestion token get
+
+> az ingestion token get -f ./templates/token.json
+
+### platform
+> az ingestion platform list
+
+> az ingestion platform add -f ./templates/platform.json
+
+> az ingestion platform show -p platform_name
+
+> az ingestion platform remove -p platform_name
+
+
+
 ## Command help:
 ```bash
 > az ingestion token get -h
