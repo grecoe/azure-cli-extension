@@ -128,6 +128,7 @@ Specific options utilized:
 
 Specifically, this extension exposes the command `az ingestion token get ..`
 
+- [Commands](#commands)
 - [Command help](#command-help)
 - [Usage](#usage)
 
@@ -147,6 +148,14 @@ Specifically, this extension exposes the command `az ingestion token get ..`
 
 > az ingestion platform remove -p platform_name
 
+### tool
+> az ingestion tool list
+
+> az ingestion tool add -f ./templates/platform.json
+
+> az ingestion tool show -p platform_name
+
+> az ingestion tool remove -p platform_name
 
 
 ## Command help:
