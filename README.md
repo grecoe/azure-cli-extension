@@ -148,14 +148,14 @@ Specifically, this extension exposes the command `az ingestion token get ..`
 
 > az ingestion platform remove -p platform_name
 
-### tool
-> az ingestion tool list
+### utility
+> az ingestion utility list
 
-> az ingestion tool add -f ./templates/platform.json
+> az ingestion utility add -f ./templates/platform.json
 
-> az ingestion tool show -p platform_name
+> az ingestion utility show -p platform_name
 
-> az ingestion tool remove -p platform_name
+> az ingestion utility remove -p platform_name
 
 
 ## Command help:

@@ -1,5 +1,6 @@
 {
     "name" : "TestPlatform",
+    "type" : "platform",
     "url" : "https://no_platform_here",
     "data_partition" : "test-platform",
     "api_path" : {

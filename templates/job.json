@@ -1,4 +1,5 @@
 {
     "name" : "Job Name",
+    "type" : "job",
     "job" : "settings below"
 }
